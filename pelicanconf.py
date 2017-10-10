@@ -33,7 +33,7 @@ MENUITEMS = (('Blog', SITEURL),)
 #crowsfoot theme args
 SITESUBTITLE = 'o mnie'
 PROFILE_IMAGE_URL = '/images/avatar.jpg'
-EMAIL_ADDRESS = 'cwiek.pawel_on_gmail.com'
+EMAIL_ADDRESS = 'cwiek.pawel _on_ gmail.com'
 GITHUB_ADDRESS = 'https://github.com/simplynail'
 SO_ADDRESS = 'https://stackoverflow.com/users/5769958/simplynail'
 SHOW_ARTICLE_AUTHOR = False
