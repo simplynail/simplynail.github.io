@@ -67,12 +67,16 @@ def preview():
     local('pelican -s publishconf.py')
 
 def publish():
-    """Publish to GitHub Pages"""
+    """Publish compiled html site as GitHub personal page - on master branch"""
     rebuild()
     local("ghp-import -b master -p output")
 
 def push_source():
+	"""push Pelican source files to separate 'dev' branch"""
+	
+	#if branch not exising, uncomment below to create it
 	#local("git branch dev")
+	
 	local("git checkout dev")
 	local("git add .")
 	local('git commit -m "source files updated"')
