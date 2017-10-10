@@ -78,7 +78,7 @@ def push_source():
 	local('git commit -m "source files updated"')
 	local("git push origin dev")
 	
-def github_full():
+def github_all():
 	publish()
 	push_source()
     
