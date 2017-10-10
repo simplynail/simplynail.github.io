@@ -66,30 +66,19 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
-def cf_upload():
-    """Publish to Rackspace Cloud Files"""
-    rebuild()
-    with lcd(DEPLOY_PATH):
-        local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-              '-U {cloudfiles_username} '
-              '-K {cloudfiles_api_key} '
-              'upload -c {cloudfiles_container} .'.format(**env))
-
-@hosts(production)
 def publish():
-    """Publish to production via rsync"""
-    local('pelican -s publishconf.py')
-    project.rsync_project(
-        remote_dir=dest_path,
-        exclude=".DS_Store",
-        local_dir=DEPLOY_PATH.rstrip('/') + '/',
-        delete=True,
-        extra_opts='-c',
-    )
-
-def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
-    local("ghp-import output")
-    local("git push https://github.com/simplynail/simplynail.github.io.git gh-pages:master --force")
+    local("ghp-import -b master -p output")
+
+def push_source():
+	#local("git branch dev")
+	local("git checkout dev")
+	local("git add .")
+	local('git commit -m "source files updated"')
+	local("git push origin dev")
+	
+def github_full():
+	publish()
+	push_source()
     
