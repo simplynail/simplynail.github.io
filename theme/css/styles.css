@@ -190,7 +190,7 @@ sub {
 }
 
 .paginator p{
-    font-size: 1.0em;
+    font-size: 0.5em;
 }
 
 /* Images */
