@@ -7,7 +7,7 @@
   <ol id="postlist">
 
     {% for article in articles_page.object_list %}
-    <li class="post">
+    <!-- <li class="post"> -->
         <header class="posttitle">
           <h3><a href="{{ SITEURL }}/{{ article.url }}"
                   rel="bookmark"
@@ -24,7 +24,7 @@
         </div><!-- /.postinfo -->
 
         <div class="postsummary"> {{ article.summary }} </div>
-    </li>
+    <!-- </li> -->
     {% endfor %}
 
   </ol><!-- /#post-list -->

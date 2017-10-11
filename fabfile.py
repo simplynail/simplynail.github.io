@@ -66,9 +66,11 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
-def install_themes():
+def install_themes(reinstall=False):
     import os
-    for theme in os.listdir('themes'):  
+    for theme in os.listdir('themes'):
+        if reinstall:
+            local('pelican-themes --remove %s' % theme)
         local('pelican-themes --install themes/%s' % theme)
 
 def publish():
