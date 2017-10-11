@@ -31,7 +31,7 @@ DISPLAY_PAGES_ON_MENU = True
 MENUITEMS = (('Blog', SITEURL),)
 
 #crowsfoot theme args
-SITESUBTITLE = 'o mnie'
+SITESUBTITLE = 'inżynier budowlany, pasjonat IT i programowania'
 PROFILE_IMAGE_URL = '/images/avatar.jpg'
 EMAIL_ADDRESS = 'cwiek.pawel _on_ gmail.com'
 GITHUB_ADDRESS = 'https://github.com/simplynail'
