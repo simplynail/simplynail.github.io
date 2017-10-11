@@ -66,6 +66,11 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
+def install_themes():
+    import os
+    for theme in os.listdir('themes'):  
+        local('pelican-themes --install themes/%s' % theme)
+
 def publish():
     """Publish compiled html site as GitHub personal page - on master branch"""
     rebuild()
