@@ -189,7 +189,7 @@ sub {
     font-size: 0.8em;
 }
 
-.paginator {
+.paginator p{
     font-size: 1.0em;
 }
 
