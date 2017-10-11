@@ -76,7 +76,7 @@ def publish():
     rebuild()
     local("ghp-import -b master -p output")
 
-def push_source():
+def push_dev():
 	"""push Pelican source files to separate 'dev' branch"""
 	
 	#if branch not exising, uncomment below to create it
@@ -89,5 +89,5 @@ def push_source():
 	
 def github_all():
 	publish()
-	push_source()
+	push_dev()
     
