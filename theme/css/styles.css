@@ -189,6 +189,10 @@ sub {
     font-size: 0.8em;
 }
 
+.paginator {
+    font-size: 1.0em;
+}
+
 /* Images */
 
 .content * img {
