@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'simplynail'
-SITENAME = "Pawel's site"
+AUTHOR = 'Pawel Cwiek'
+SITENAME = 'Pawel Cwiek'
 SITEURL = ''
 
 THEME = 'crowsfoot'
@@ -12,7 +12,7 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Warsaw'
 
-DEFAULT_LANG = 'Polish'
+DEFAULT_LANG = 'pl'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -20,8 +20,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-#STATIC_PATHS = ['images', 'static_files']
 
 #pelican-blue args
 SIDEBAR_DIGEST = 'Programmer and Web Developer'
@@ -35,7 +33,7 @@ SITESUBTITLE = 'inżynier budowlany, pasjonat IT i programowania'
 PROFILE_IMAGE_URL = '/images/avatar.jpg'
 EMAIL_ADDRESS = 'cwiek.pawel _on_ gmail.com'
 GITHUB_ADDRESS = 'https://github.com/simplynail'
-SO_ADDRESS = 'https://stackoverflow.com/users/5769958/simplynail'
+LI_ADDRESS = 'https://linkedin.com/in/pawelcwiek/'
 SHOW_ARTICLE_AUTHOR = False
 
 # Blogroll
