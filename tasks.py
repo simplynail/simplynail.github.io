@@ -117,4 +117,19 @@ def ghpages(c):
     preview(c)
     c.run('ghp-import -b {github_pages_branch} '
           '-m {commit_message} '
-          '{deploy_path} -p'.format(**CONFIG))
+          '-p {deploy_path}'.format(**CONFIG))
+		  
+@task
+def symlinkthemes(c):
+    """Link themes found in repo's 'themes' folder as pelican symlink. note to change themes' subfolder name to something unique to avoid clashes"""
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+    themes_folder = os.path.join(PROJECT_ROOT,'themes')
+
+    themes = []
+    for filedir in os.listdir(themes_folder):
+        if os.path.isdir(filedir):
+            themes.append(filedir)
+    
+    for theme in themes:
+        print('symlinking pelican theme: ' + theme)
+        c.run('pelican-themes --symlink ' + theme)

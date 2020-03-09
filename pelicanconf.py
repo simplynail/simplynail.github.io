@@ -6,9 +6,16 @@ AUTHOR = 'Pawel Cwiek'
 SITENAME = 'Pawel Cwiek'
 SITEURL = ''
 
-THEME = 'crowsfoot'
+# try 'symlinkthemes' from invoke tasks.py method first  
+THEME = 'themes/sn_crowsfoot'
+# THEME_TEMPLATES_OVERRIDES = ['themes']
+# CSS_FILE = 'main.css'
 
 PATH = 'content'
+USE_FOLDER_AS_CATEGORY = True
+DISPLAY_PAGES_ON_MENU = True
+PAGE_PATHS = ['pages']
+DISPLAY_CATEGORIES_ON_MENU = False
 
 TIMEZONE = 'Europe/Warsaw'
 
