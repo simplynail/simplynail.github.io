@@ -1,0 +1,3 @@
+translate.sh
+translations/babel.cfg
+translations/messages.pot
